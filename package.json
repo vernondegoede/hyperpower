@@ -1,14 +1,15 @@
 {
-  "name": "hyperpower",
-  "version": "0.3.0",
+  "name": "mollie-terminal",
+  "version": "0.0.1",
   "keywords": [
+    "mollie",
     "hyper",
-    "hyper.app"
+    "terminal"
   ],
-  "description": "Extension for particle effects in Hyper",
+  "description": "Some extra motivation while developing Mollie applications using your Hyper terminal.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zeit/hyperpower.git"
+    "url": "git+https://github.com/vernondegoede/hyperpower.git"
   },
   "dependencies": {
     "color": "0.11.3",
