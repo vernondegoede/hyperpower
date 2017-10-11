@@ -154,7 +154,7 @@ exports.decorateTerm = (Term, { React, notify }) => {
         particle.y += particle.velocity.y;
         particle.alpha *= PARTICLE_ALPHA_FADEOUT;
         this._canvasContext.fillStyle = `rgba(${particle.color.join(',')}, ${particle.alpha})`;
-        this._canvasContext.fillRect(Math.round(particle.x - 1), Math.round(particle.y - 1), 3, 3);
+        this._canvasContext.fillText(particle.emoji, Math.round(particle.x - 1), Math.round(particle.y - 1));
       });
       this._particles = this._particles
         .slice(Math.max(this._particles.length - MAX_PARTICLES, 0))
@@ -184,9 +184,10 @@ exports.decorateTerm = (Term, { React, notify }) => {
     _createParticle (x, y, color) {
       return {
         x,
-        y: y,
+        y,
         alpha: 1,
         color,
+        emoji: '💸',
         velocity: {
           x: PARTICLE_VELOCITY_RANGE.x[0] + Math.random() *
             (PARTICLE_VELOCITY_RANGE.x[1] - PARTICLE_VELOCITY_RANGE.x[0]),
