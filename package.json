@@ -1,6 +1,6 @@
 {
   "name": "mollie-terminal",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords": [
     "mollie",
     "hyper",
@@ -9,7 +9,7 @@
   "description": "Some extra motivation while developing Mollie applications using your Hyper terminal.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vernondegoede/hyperpower.git"
+    "url": "git+https://github.com/vernondegoede/mollie-terminal.git"
   },
   "dependencies": {
     "color": "0.11.3",

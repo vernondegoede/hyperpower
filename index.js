@@ -8,7 +8,7 @@ const values = require('lodash.values');
 const MAX_PARTICLES = 500;
 const PARTICLE_NUM_RANGE = () => 5 + Math.round(Math.random() * 5);
 const PARTICLE_GRAVITY = 0.075;
-const PARTICLE_ALPHA_FADEOUT = 0.96;
+const PARTICLE_ALPHA_FADEOUT = 0.98;
 const PARTICLE_VELOCITY_RANGE = {
   x: [-1, 1],
   y: [-3.5, -1.5]
@@ -154,6 +154,7 @@ exports.decorateTerm = (Term, { React, notify }) => {
         particle.y += particle.velocity.y;
         particle.alpha *= PARTICLE_ALPHA_FADEOUT;
         this._canvasContext.fillStyle = `rgba(${particle.color.join(',')}, ${particle.alpha})`;
+        this._canvasContext.font ='30px Arial';
         this._canvasContext.fillText(particle.emoji, Math.round(particle.x - 1), Math.round(particle.y - 1));
       });
       this._particles = this._particles
@@ -187,7 +188,7 @@ exports.decorateTerm = (Term, { React, notify }) => {
         y,
         alpha: 1,
         color,
-        emoji: '💸',
+        emoji: '💰',
         velocity: {
           x: PARTICLE_VELOCITY_RANGE.x[0] + Math.random() *
             (PARTICLE_VELOCITY_RANGE.x[1] - PARTICLE_VELOCITY_RANGE.x[0]),
