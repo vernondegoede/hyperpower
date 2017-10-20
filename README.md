@@ -1,18 +1,21 @@
-
 # Mollie Hyper plugin
 
-Some extra motivation while developing Mollie applications using your Hyper terminal.
+Some extra motivation while developing apps using your Hyper terminal.
 
-## How to use
+## Install using [HPM](https://github.com/zeit/hpm)
 
-Install [Hyper](https://hyper.is) and add `mollie-terminal`
-to `plugins` in `~/.hyper.js`.
+```
+$ npm install -g hpm-cli
+$ hpm install mollie-terminal
+```
+
+Restart Hyper.
+
+## Install manually
+1. Open `~/.hyper.js`.
+2. Add `verminal` the the `plugins` array. 
+3. Enjoy Verminal.
 
 ## Credits
 
-Based on [`hyperpower`](https://github.com/zeit/hyperpower), [`power-mode`](https://atom.io/packages/power-mode) and
-[`rage-power`](https://github.com/itszero/rage-power).
-
-## License
-
-MIT
+Original idea for this plugin came from <a href="https://twitter.com/adriaanmol">@adriaanmol</a>.
